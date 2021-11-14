@@ -89,7 +89,7 @@ while True:
         cv2.putText(image, getClassName(classIndex), (120, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         cv2.putText(image, str(int(probabilityValue)*100)+"%", (200, 75), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("Model Predictions", image)
-    cv2.waitKey(1)
+    returnedValue = cv2.waitKey(1)
     if returnedValue == ord("q") or returnedValue == ord("Q"):
         cv2.destroyAllWindows()
         break
